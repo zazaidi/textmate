@@ -7,3 +7,5 @@ Possible solutions
 > Use some JS to fix the clicking issue
 > Use a different kind of Drupal menu that is responsive* 13:39:47
 * 13:40:13
+Finished setting up my work environment to have hourly reminders. 
+* 13:41:27
