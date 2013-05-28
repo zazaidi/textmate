@@ -1,6 +1,7 @@
 #!/bin/bash 
 now=$(date +"%m_%d_%Y")
 time=$(date +"%T")
+say $time
 cd /Users/zazaidi/Google\ Drive/textmate/
 if [ ! -f /Users/zazaidi/Google\ Drive/textmate/$now/private.md  ]; then
 	mkdir -p /Users/zazaidi/Google\ Drive/textmate/$now
