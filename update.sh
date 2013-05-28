@@ -9,7 +9,7 @@ if [ ! -f /Users/zazaidi/Documents/UTO/textmate/$now.md  ]; then
 	/usr/local/git/bin/git push origin master
 else 
 /usr/local/git/bin/git add .
-/usr/local/git/bin/git commit -am "Updating.."
+/usr/local/git/bin/git commit -am "Update"
 /usr/local/git/bin/git push origin master
 ~/bin/mate /Users/zazaidi/Documents/UTO/textmate/$now.md
 	

@@ -160,3 +160,9 @@ Modes
 	
 # Selenium # 
 	And a @javascript above the Scenario and it will open in Selenium
+	wget selenium.jar
+
+1) Drupal extenstion : http://bit.y/drupal-extension [Installs everything else behat,mink]
+
+knpUniversity/screencast/behat 
+Coupon: HIPSTER
