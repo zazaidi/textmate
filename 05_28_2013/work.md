@@ -7,3 +7,4 @@ Possible solutions
 > Use some JS to fix the clicking issue
 > Use a different kind of Drupal menu that is responsive
 * 13:15:42
+* 13:33:55

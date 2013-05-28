@@ -13,3 +13,5 @@ I need to take advantage of every moment of everyday to build my knowledge and b
 * 13:03:11
 * 13:05:59
 * 13:15:42
+#Thought
+I have to always remember to keep my thoughts focused on the One and on the Purpose. * 13:33:55

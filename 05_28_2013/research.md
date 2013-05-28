@@ -10,3 +10,9 @@
 * 13:03:11
 * 13:05:59
 * 13:15:42
+#Research 
+Sigh, not much done today with this. I am working on making a Drupal site that contains all my data so I don't have to constantly keep going back and forth between the files trying to find things. 
+> http://zohairzaidi.com/ingan/
+
+
+* 13:33:55

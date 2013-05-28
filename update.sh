@@ -1,7 +1,10 @@
 #!/bin/bash 
 now=$(date +"%m_%d_%Y")
 time=$(date +"%T")
-say "$time Time to update files"
+
+$verse = curl -s http://ayatalquran.com/random | grep '<h2 id="aya_text">' | awk -Ftext '{print $NF}' | cut -f1 -d"<" | cut -f2 -d">"
+
+say "$time $verse"
 cd /Users/zazaidi/Google\ Drive/textmate/
 if [ ! -f /Users/zazaidi/Google\ Drive/textmate/$now/private.md  ]; then
 	mkdir -p /Users/zazaidi/Google\ Drive/textmate/$now
