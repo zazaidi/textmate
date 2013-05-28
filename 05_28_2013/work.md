@@ -35,5 +35,22 @@ The first link seems like a viable CSS/JS based solution. I will try modifying t
 Recreate the menu using Superfish which automatically has responsive behavior in menus. 
 Keith granting me access on the Pantheon site. 
 
+_Break_
 
 * 15:01:00
+
+The Pantheon dev site seems to be broken, may need to recreate SLS onto Pantheon. 
+Just got access by Keith into Pantheon, going to now add the Superfish module and see how things look.
+
+Working Solution
+---
+
+I was able to make it work by changing the Superfish settings in the Menu block and enabled the touchscreen option and put in User agents for it to detect. 
+> http://http://dev-sls.ws.asu.edu/admin/build/block/configure/superfish/1
+
+That should work, will need to do more testing on different devices. 
+
+Going to work on making a script so it detects all the #Task tags and makes list of all the tasks I need to do. 
+Sudo script: Loop through all the files in this directory and subdirectorys, grep for #Task and pull the line and the Date -> Save it in list and open the list sort by date and sync the tasks. Once the task is complete - Will append -Complete and so will need to remove it from the list. 
+#Task-052813 SLS Menu Issue:Completed
+* 16:01:00
