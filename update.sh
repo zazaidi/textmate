@@ -16,7 +16,7 @@ if [ ! -f /Users/zazaidi/Google\ Drive/textmate/$now/private.md  ]; then
 	/usr/local/git/bin/git push origin master
 else 
 	echo "* $time" >> /Users/zazaidi/Google\ Drive/textmate/$now/private.md
-	echo "* $time" >> /Users/zazaidi/Google\ Drive/textmate/$now/work.md
+	echo "* $time" >> /Users/zazaidi/Google\ Drive/textmate/$now/work.md	
 	echo "* $time" >> /Users/zazaidi/Google\ Drive/textmate/$now/research.md
 	/usr/local/git/bin/git add .
     /usr/local/git/bin/git commit -am "Hourly Update"
