@@ -4,7 +4,7 @@ time=$(date +"%T")
 
 verse=$(curl -b -s http://ayatalquran.com/random | grep '<h2 id="aya_text">' | awk -Ftext '{print $NF}' | cut -f1 -d"<" | cut -f2 -d">")
 
-say "$verse"
+say "$time $verse"
 cd /Users/zazaidi/Google\ Drive/textmate/
 if [ ! -f /Users/zazaidi/Google\ Drive/textmate/$now/private.md  ]; then
 	mkdir -p /Users/zazaidi/Google\ Drive/textmate/$now
