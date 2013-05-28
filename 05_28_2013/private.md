@@ -4,3 +4,4 @@
 #Change
 I need to take advantage of every moment of everyday to build my knowledge and become the best in every aspect of my life from my spirituality to my work to my research. 
 * 12:46:23
+* 12:55:19
