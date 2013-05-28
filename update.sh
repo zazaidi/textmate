@@ -1,6 +1,6 @@
 #!/bin/bash 
 now=$(date +"%m_%d_%Y")
-time=$(date + "%mm_%ss")
+time=$(date + "%T")
 cd /Users/zazaidi/Documents/UTO/textmate/
 if [ ! -f /Users/zazaidi/Documents/UTO/textmate/$now/private.md  ]; then
 	mkdir -p /Users/zazaidi/Documents/UTO/textmate/$now
@@ -14,9 +14,9 @@ if [ ! -f /Users/zazaidi/Documents/UTO/textmate/$now/private.md  ]; then
 	/usr/local/git/bin/git commit -am "Adding files for $now"
 	/usr/local/git/bin/git push origin master
 else 
-	echo "* $time" > /Users/zazaidi/Documents/UTO/textmate/$now/private.md
-	echo "* $time" > /Users/zazaidi/Documents/UTO/textmate/$now/work.md
-	echo "* $time" > /Users/zazaidi/Documents/UTO/textmate/$now/research.md
+	echo "* $time" >> /Users/zazaidi/Documents/UTO/textmate/$now/private.md
+	echo "* $time" >> /Users/zazaidi/Documents/UTO/textmate/$now/work.md
+	echo "* $time" >> /Users/zazaidi/Documents/UTO/textmate/$now/research.md
 	/usr/local/git/bin/git add .
 	/usr/local/git/bin/git commit -am "Hourly Update"
 	/usr/local/git/bin/git push origin master
