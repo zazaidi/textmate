@@ -6,5 +6,5 @@ Possible solutions
 > Create a mobile theme 
 > Use some JS to fix the clicking issue
 > Use a different kind of Drupal menu that is responsive
-* 
+
 * 12:46:23

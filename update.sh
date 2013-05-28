@@ -1,7 +1,7 @@
 #!/bin/bash 
 now=$(date +"%m_%d_%Y")
 time=$(date +"%T")
-cd /Users/zazaidi/Documents/UTO/textmate/
+cd /Users/zazaidi/Google\ Drive/UTO/textmate/
 if [ ! -f /Users/zazaidi/Documents/UTO/textmate/$now/private.md  ]; then
 	mkdir -p /Users/zazaidi/Documents/UTO/textmate/$now
 	touch /Users/zazaidi/Documents/UTO/textmate/$now/private.md
