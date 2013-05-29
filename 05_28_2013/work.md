@@ -54,9 +54,22 @@ Going to work on making a script so it detects all the #Task tags and makes list
 Sudo script: Loop through all the files in this directory and subdirectorys, grep for #Task and pull the line and the Date -> Save it in list and open the list sort by date and sync the tasks. Once the task is complete - Will append -Complete and so will need to remove it from the list. 
 #Task-052813 SLS Menu Issue:Completed
 * 16:01:00
+<<<<<<< Local Changes
+
+=======
 Have made script to create tasks and completed lists 
 Working on getting it so that those in completed are removed from tasks
 #Task-052813 Finish Tasking System
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+* 21:29:33
+>>>>>>> External Changes
+=======
+* 21:29:33
+* 22:01:00
+>>>>>>> External Changes
+=======
 * 21:29:33
 * 22:01:00
 * 23:01:00
+>>>>>>> External Changes

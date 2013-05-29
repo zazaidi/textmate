@@ -9,5 +9,16 @@
 * 08:01:00
 * 09:01:01
 * 10:01:01
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+Watching Drupal SEO video about optimizing SEO
+=======
+* 11:01:01
+>>>>>>> External Changes
+Configuring some SEO Tools and SEO Checklist on a test Drupal site, so far with not much success. 
+=======
 * 11:01:01
 * 12:01:00
+>>>>>>> External Changes
+Need to get ready for SEO meeting. 
+* 13:01:00
