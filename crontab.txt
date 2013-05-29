@@ -1,1 +1,2 @@
 1 * * * * bash /Users/zazaidi/Google\ Drive/textmate/update.sh
+* * * * * bash /Users/zazaidi/Google\ Drive/textmate/tasks.sh

@@ -29,4 +29,11 @@ I have to always remember to keep my thoughts focused on the One and on the Purp
 =======
 * 15:01:00
 >>>>>>> External Changes
-Another bombing in Sadr city, 58 people dead. It is ridiculous and unimaginable why people can kill themselves to kill innocent people.* 16:01:00
+Another bombing in Sadr city, 58 people dead. It is ridiculous and unimaginable why people can kill themselves to kill innocent people.
+* 16:01:00
+Have made script to create tasks and completed lists 
+Working on getting it so that those in completed are removed from tasks
+#Task-052813 Finish Tasking System
+I have used bash script to generate and now the tasking system is complete. Set up a cronjob to run every 15 minutes. 
+#Task-052813 Finish Tasking System:Completed
+* 21:29:33
