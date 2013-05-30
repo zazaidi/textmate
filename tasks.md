@@ -1,2 +1,2 @@
 052813 Finish Uploading Data onto zohairzaidi.com/ingan
-052813 Finish Tasking System
+053013 Email Si to setup time to Train two undergrads 
