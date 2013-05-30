@@ -7,3 +7,5 @@
 * 11:01:00
 * 12:01:00
 * 13:01:00
+053013 Email Si to setup time to Train two undergrads:Completed
+* 14:01:00
