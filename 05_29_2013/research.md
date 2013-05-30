@@ -22,4 +22,12 @@
 * 22:01:00
 * 22:09:36
 #Task-053013 Email Si to setup time to Train two undergrads 
+<<<<<<< Local Changes
+
+Now=======
 * 23:01:00
+>>>>>>> External Changes
+I just finished uploading all the SEM pictures fou into the system.. Now found on /pictures. 
+Need to analyze and see trends.
+
+#Task-053013 Come up with more Views for different parameters
