@@ -21,6 +21,75 @@ Configuring some SEO Tools and SEO Checklist on a test Drupal site, so far with 
 * 12:01:00
 >>>>>>> External Changes
 Need to get ready for SEO meeting. 
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+#SEO Strategy Meeting
+
+SEO Presentation
+===
+
+=======
+* 13:01:00
+>>>>>>> External Changes
+In the SEO strategy meeting.=======
+* 13:01:00
+* 15:01:00
+>>>>>>> External Changes
+There is a problem with webhost300 - Investigating.
+=======
+* 13:01:00
+* 15:01:00
+* 16:01:00
+>>>>>>> External Changes
+Found that it is being DDOS, blackholed couple of IP address load seems normal now
+=======
+* 13:01:00
+* 15:01:00
+* 16:01:00
+* 17:01:00
+>>>>>>> External Changes
+=======
+* 13:01:00
+* 15:01:00
+* 16:01:00
+* 17:01:00
+* 18:01:00
+>>>>>>> External Changes
+=======
+* 13:01:00
+* 15:01:00
+* 16:01:00
+* 17:01:00
+* 18:01:00
+* 19:01:00
+>>>>>>> External Changes
+=======
+* 13:01:00
+* 15:01:00
+* 16:01:00
+* 17:01:00
+* 18:01:00
+* 19:01:00
+* 20:01:00
+>>>>>>> External Changes
+=======
+* 13:01:00
+* 15:01:00
+* 16:01:00
+* 17:01:00
+* 18:01:00
+* 19:01:00
+* 20:01:00
+* 21:01:00
+>>>>>>> External Changes
+=======
 * 13:01:00
 * 15:01:00
 * 16:01:00
@@ -30,3 +99,5 @@ Need to get ready for SEO meeting.
 * 20:01:00
 * 21:01:00
 * 22:01:00
+>>>>>>> External Changes
+* 22:09:36

@@ -73,4 +73,17 @@ You must use the means he has given you to remember and obey Him and He will slo
 _Subconciously thoughts come into my mind that begin to inflame the desires - Return to focus on the present moment to let them subside_
 
 In this life the only thing of value is the time you spend in remembrance and invocation of your Lord. The greatest dhikr is the dhikr of action. Completely stop and turn yourself away from all that which displeases Him and turn towards that which pleases him. 
+
 * 22:01:00
+
+>Truth has come and falsehood has vanished away..
+
+Allah..Allah..Allah..Allah..Allah..Allah..Allah..Allah..Allah..Allah..Allah..Allah..Allah..Allah
+
+I want to have the moment of Hur every day and every night. Transform and become renewed and into the mo'min and believer that I have wanted to become. 
+
+TODO I need to work on this. 
+
+FIXME Fix this right now 
+
+* 22:09:36
