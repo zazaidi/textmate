@@ -15,6 +15,19 @@ Indeed the time has come for me to write. The pen is to express the depeest and 
 * 18:01:00
 * 19:01:00
 * 20:01:00
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+The brother came and tried to fix the satellite dish but was unable to do so. I have to now figure it out. I must succed in doing this. =======
+* 21:01:00
+>>>>>>> External Changes
+=======
+* 21:01:00
+* 22:01:00
+>>>>>>> External Changes
+=======
 * 21:01:00
 * 22:01:00
 * 23:01:00
+>>>>>>> External Changes
+Watching shawshank redemption
