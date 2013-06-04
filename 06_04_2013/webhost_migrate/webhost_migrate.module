@@ -56,13 +56,17 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
 	  $pass_decrypt = decrypt($passwd);
 	  drupal_set_message(t($pass),'status');
 	  drupal_set_message(t($pass_decrypt),'status');*/
+        $host = $submission->data[$mapping['domain']]['value'][0];
+		$path = $submission->data[$mapping['path']]['value'][0];
 		$username = $submission->data[$mapping['username']]['value'][0];
 		$pass = $submission->data[$mapping['password']]['value'][0];
 		$key = ssh_helper_load_key();
 		// This will be our connection class, hostname is obligatory
+		drupal_set_message($host,'status');
+		drupal_set_message($path,'status');
 		$ssh = ssh_helper_load_ssh('webhost-test.asu.edu');
 		$ssh->login($username,$pass);
-		$message = $ssh->exec('bash /tmp/export.sh http://whmigrate-test.asu.edu /home/whtest/domains/whmigrate-test.asu.edu');	
+		$message = $ssh->exec('bash /tmp/export.sh $host $path');	
 		$exp = explode("links:", $message);
 		drupal_set_message($exp[1],'status');
 
