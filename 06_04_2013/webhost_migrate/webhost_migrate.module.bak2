@@ -13,9 +13,9 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
       // Add the submit handler after the existing Webform submit handler,
       // but before the second Webform handler. Pop off the first one and add
       // ours second.
-     /* $first = array_shift($form['#submit']);
+      $first = array_shift($form['#submit']);
       array_unshift($form['#submit'], $first, 'webhost_migrate_submit_1');
-	  */
+	  
     }
   }
   
@@ -47,6 +47,22 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
 	*/
   }
 
+  function webhost_migrate_webform_submission_presave($node,&$submission) {
+	  $component_id = 1;
+	  $submission->data[$component_id][0] = 'FOO';
+	
+	
+  }
+  /**
+  * Submit handler for Webform ID #44.
+  */
+  function webhost_migrate_submit_1(&$form, &$form_state) {
+    global $user;
+
+    // Changes can be made to the Webform node settings by modifying this variable:
+   // $form['#node']->webform;
+    // Insert things into other database tables or modify properties.
+  }
 
   function webhost_migrate_webform_submission_insert($node, $submission) {
     if ($node->nid == 8) {
@@ -63,9 +79,20 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
 		$ssh = ssh_helper_load_ssh('webhost-test.asu.edu');
 		$ssh->login($username,$pass);
 		$message = $ssh->exec('bash /tmp/export.sh http://whmigrate-test.asu.edu /home/whtest/domains/whmigrate-test.asu.edu');	
-		$exp = explode("links:", $message);
-		drupal_set_message($exp[1],'status');
-
+	  $exp = explode("links:", $message);
+	  /*$split = preg_split('/\s+/',$exp[1]);
+	  drupal_set_message(t("Drupal: ".$split[1]),'status');
+	  drupal_set_message(t("Database: ".$split[2]),'status');
+	  drupal_set_message(t("Files: ".$split[3]),'status');
+	  */
+	  drupal_set_message(t($exp[1]),'status');
+	  /*
+	  $submissions = webform_get_submissions('8');
+       foreach ($submissions as $submission) {
+		webform_submission_delete($node, $submission);
+		//drupal_set_message(t($message),'status');
+    }*/
+     //webform_submission_delete($nid,$sid);
 	 	  
   }
 }

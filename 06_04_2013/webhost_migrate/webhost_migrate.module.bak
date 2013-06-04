@@ -13,9 +13,9 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
       // Add the submit handler after the existing Webform submit handler,
       // but before the second Webform handler. Pop off the first one and add
       // ours second.
-     /* $first = array_shift($form['#submit']);
+      $first = array_shift($form['#submit']);
       array_unshift($form['#submit'], $first, 'webhost_migrate_submit_1');
-	  */
+	  
     }
   }
   
@@ -63,9 +63,6 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
 		$ssh = ssh_helper_load_ssh('webhost-test.asu.edu');
 		$ssh->login($username,$pass);
 		$message = $ssh->exec('bash /tmp/export.sh http://whmigrate-test.asu.edu /home/whtest/domains/whmigrate-test.asu.edu');	
-		$exp = explode("links:", $message);
-		drupal_set_message($exp[1],'status');
-
 	 	  
   }
 }
