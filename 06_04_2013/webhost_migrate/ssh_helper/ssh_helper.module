@@ -1,0 +1,153 @@
+<?php
+
+/**
+ * @file ssh_helper.module
+ * Helps to make SSH connections from within PHP to execute commands
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function ssh_helper_menu() {
+  $items = array();
+  $items['admin/config/services/ssh-helper'] = array(
+    'title' => t('SSH key parameters'),
+    'description' => t('Manage SSH key used to make connections to remote servers.'),
+    'access arguments' => array('administer ssh helper'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ssh_helper_settings'),
+    'file' => 'ssh_helper.admin.inc',
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function ssh_helper_permission() {
+  return array(
+    'administer ssh helper' => array(
+      'title' => t('Administer SSH Helper'),
+      'description' => t('Create and administer SSH key pairs for this site.'),
+    ),
+  );
+}
+
+/**
+ * Registers the autoloader for packages managed by Composer.
+ */
+function ssh_helper_register_autoloader() {
+  if (module_exists('composer_manager') && function_exists('composer_manager_register_autoloader')) {
+    composer_manager_register_autoloader();
+  }
+  else {
+    require_once __DIR__ . '/vendor/autoload.php';
+  }
+}
+
+/**
+ * Loads the ssh key.
+ *
+ * @return Crypt_RSA
+ * @throws SshHelperException
+ */
+function ssh_helper_load_key() {
+  ssh_helper_register_autoloader();
+  $key_path = ssh_helper_key_path();
+  $ssh_filename = variable_get('ssh_helper_key_filename', 'id_rsa_ssh_helper');
+  $private_key_pass = variable_get('ssh_helper_private_key_pass', '');
+
+  $private_path = $key_path . '/' . $ssh_filename;
+  $private_key  = file_get_contents($private_path);
+
+  $key = new Crypt_RSA();
+  if ($private_key_pass) {
+    $key->setPassword($private_key_pass);
+  }
+  if (!$key->loadKey($private_key)) {
+    // Throws an error in case the key could not be loaded.
+    throw new SshHelperException('Key could not be loaded.', $key_path);
+  }
+  return $key;
+}
+
+function ssh_helper_load_ssh($hostname) {
+  ssh_helper_register_autoloader();
+  $ssh = new Net_SSH2($hostname);
+  return $ssh;
+}
+
+/**
+ * Performs SSH login to a given host.
+ *
+ * @param string $hostname
+ *   Hostname to login to.
+ * @param string $user
+ *   (optional) User to log in as. Defaults to the user provided in the
+ *   SSH helper settings.
+ * @param Crypt_RSA $key
+ *   (optional) Key to use during the SSH login process. Defaults to the
+ *   key generated in the SSH helper settings.
+ *
+ * @return Net_SSH2
+ *   Connection class to use to execute commands for example.
+ * @throws SshHelperException
+ */
+function ssh_helper_login_ssh($hostname, $user = NULL, $key = NULL) {
+  if (empty($user)) {
+    $user = variable_get('ssh_helper_username', NULL);
+  }
+  if (empty($key)) {
+    $key = ssh_helper_load_key();
+  }
+  // This will be our connection class, hostname is required.
+  $ssh = ssh_helper_load_ssh($hostname);
+  if (!$ssh->login($user, $key)) {
+    throw new SshHelperException('SSH login failed');
+  }
+  return $ssh;
+}
+
+function ssh_helper_key_path() {
+  $key_path = variable_get('ssh_helper_file_private_key_path', '');
+  if (!$key_path) {
+    $base = file_default_scheme() . '://ssh_helper/';
+    $hash = hash_hmac('sha256', $base, drupal_get_private_key() . drupal_get_hash_salt());
+    $key_path = $base . $hash;
+  }
+
+  return $key_path;
+}
+
+/**
+ * Generates a new pair of keys.
+ */
+function ssh_helper_generate_keypair() {
+  $key_path = ssh_helper_key_path();
+  $ssh_mail = variable_get('ssh_helper_key_comment', 'drupal@ssh_helper');
+  $ssh_filename = variable_get('ssh_helper_key_filename', 'id_rsa_ssh_helper');
+
+  file_prepare_directory($key_path, FILE_CREATE_DIRECTORY);
+  // Should be outside the docroot, but try to protect with .htaccess as a fallback.
+  file_create_htaccess($key_path, TRUE);
+  $public_path = $key_path . '/' . $ssh_filename . '.pub';
+  $private_path = $key_path . '/' . $ssh_filename;
+
+  // Deletes the old key pair, if it exists.
+  file_unmanaged_delete($private_path);
+  file_unmanaged_delete($public_path);
+
+  // Generates the SSH key pair.
+  $cmd = 'ssh-keygen -f' . escapeshellarg(drupal_realpath($key_path) . '/' . $ssh_filename) . ' -b 4096 -N "" -C ' . escapeshellarg($ssh_mail);
+  exec($cmd, $output, $retval);
+  if ($retval !== 0) {
+    drupal_set_message("Command failed with output:<br/>$cmd</br>" . implode("<br/>\n",$output), 'error');
+  }
+
+  // Makes sure permissions are right.
+  drupal_chmod($private_path, 0600);
+
+  // Loads the public key and saves it as a variable.
+  $public_key = file_get_contents($public_path);
+  variable_set('ssh_helper_public_key', $public_key);
+}

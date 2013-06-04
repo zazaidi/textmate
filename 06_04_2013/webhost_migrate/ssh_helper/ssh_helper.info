@@ -1,0 +1,16 @@
+name = SSH Helper
+description = Allows you to create a SSH key pair and make SSH connections
+core = 7.x
+package = Other
+
+configure = admin/config/services/ssh-helper
+
+files[] = ssh_helper.exception.inc
+files[] = ssh_helper.test
+
+; Information added by drupal.org packaging script on 2013-04-10
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "ssh_helper"
+datestamp = "1365558536"
+

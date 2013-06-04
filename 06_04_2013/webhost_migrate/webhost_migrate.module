@@ -65,9 +65,20 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
   
   function webhost_migrate_webform_submission_insert($node, $submission) {
     if ($node->nid == 8) {
+		
       $mapping = _webhost_migrate_webform_component_mapping($node);
-   
-      $pass = $submission->data[$mapping['password']]['value'][0];
+     /* $pass = $submission->data[$mapping['password']]['value'][0];
+	  $pass_decrypt = decrypt($passwd);
 	  drupal_set_message(t($pass),'status');
+	  drupal_set_message(t($pass_decrypt),'status');*/
+		$username = $submission->data[$mapping['username']]['value'][0];
+		$pass = $submission->data[$mapping['password']]['value'][0];
+		$key = ssh_helper_load_key();
+		// This will be our connection class, hostname is obligatory
+		$ssh = ssh_helper_load_ssh('webhost-test.asu.edu');
+		$ssh->login($username,$pass);
+		$message = $ssh->exec('echo hello');
+		drupal_set_message(t($message),'status');
+		
     }
   }
