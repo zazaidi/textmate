@@ -6,6 +6,8 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
     // Add validation for a particular Webform node:
     if ($form_id == 'webform_client_form_8') {
       // Simply add the additional validate handler.
+	
+		 
 	  drupal_set_message(t('This is a test'),'status');
       $form['#validate'][] = 'webhost_migrate_validate_1';
 
@@ -77,8 +79,18 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
 		// This will be our connection class, hostname is obligatory
 		$ssh = ssh_helper_load_ssh('webhost-test.asu.edu');
 		$ssh->login($username,$pass);
-		$message = $ssh->exec('echo hello');
-		drupal_set_message(t($message),'status');
+		$message = $ssh->exec('bash /tmp/export.sh http://whmigrate-test.asu.edu /home/whtest/domains/whmigrate-test.asu.edu');	
+	  $exp = explode("links:", $message);
+	  $split = preg_split('/\s+/',$exp[1]);
+	  drupal_set_message(t("Drupal: ".$split[1]),'status');
+	  drupal_set_message(t("Database: ".$split[2]),'status');
+	  drupal_set_message(t("Files: ".$split[3]),'status');
+	  
+	  $submissions = webform_get_submissions('8');
+       foreach ($submissions as $submission) {
+		webform_submission_delete($node, $submission);
+		//drupal_set_message(t($message),'status');
 		
     }
   }
+}
