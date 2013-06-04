@@ -1,0 +1,3 @@
+name = Webhost Migrate
+description = A module to generate backup links for your Drupal site hosted on ASU Webhosting Environment to faciliate migration. 	
+core = 7.x

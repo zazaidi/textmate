@@ -1,0 +1,11 @@
+<?php
+/**
+* Implements hook_block_info().
+*/
+function webhost_migrate_block_info() {
+  $blocks['webhost_migrate'] = array(
+    'info' => t('Webhost Migrate'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+  return $blocks;
+}
