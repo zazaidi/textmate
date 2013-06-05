@@ -27,3 +27,4 @@ Sleeping now.. 2:18 am
 
 I need to sync my life together seamlessly. Come up with a solution that utilize laptop, desktop, NAS, phone, ipad, android tablet.. Everything together so that every moment is used to improve and better myself and make myself closer to Allah. Few apps. More utility. 
 * 03:01:00
+* 04:01:00
