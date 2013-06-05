@@ -6,3 +6,4 @@ I got the n750 WNDR4000 dual router for $40. Hopefully it will fix the speed iss
 * 14:01:00
 * 15:01:00
 * 16:01:00
+* 20:01:00

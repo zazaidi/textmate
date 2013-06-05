@@ -64,11 +64,12 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
 		// This will be our connection class, hostname is obligatory
 		drupal_set_message($host,'status');
 		drupal_set_message($path,'status');
-		$ssh = ssh_helper_load_ssh('webhost-test.asu.edu');
+		$ssh = ssh_helper_load_ssh($host);
 		$ssh->login($username,$pass);
-		$message = $ssh->exec('bash /tmp/export.sh $host $path');	
+		drupal_set_message('./tmp/export.sh $host $path','status');
+		$message = $ssh->exec("bash /tmp/export.sh '$host' '$path'");	
 		$exp = explode("links:", $message);
-		drupal_set_message($exp[1],'status');
+		drupal_set_message($message,'status');
 
 	 	  
   }
