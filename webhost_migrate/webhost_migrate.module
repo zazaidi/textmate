@@ -1,0 +1,73 @@
+<?php
+/**
+* Implements hook_block_info().
+*/
+function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
+    // Add validation for a particular Webform node:
+    if ($form_id == 'webform_client_form_8') {
+      // Simply add the additional validate handler.
+	
+		 
+	  //drupal_set_message(t('This is a test 2'),'status');
+      $form['#validate'][] = 'webhost_migrate_validate_1';
+      // Add the submit handler after the existing Webform submit handler,
+      // but before the second Webform handler. Pop off the first one and add
+      // ours second.
+     /* $first = array_shift($form['#submit']);
+      array_unshift($form['#submit'], $first, 'webhost_migrate_submit_1');
+	  */
+    }
+  }
+  
+ function _webhost_migrate_webform_component_mapping($node) {
+    $mapping = array();
+    $components = $node->webform['components'];
+    foreach ($components as $i => $component) {
+      $key = $component['form_key'];
+      $mapping[$key] = $i;
+    }
+    return $mapping;
+  }
+
+  /**
+  * Validation handler for Webform ID #44.
+  */
+  function webhost_migrate_validate_1(&$form, &$form_state) {
+    global $user;
+	/*
+    if (!isset($user->roles[3])) {
+      form_set_error('', t('Your user role is not allowed to submit this Webform.'));
+    }
+	$password = $submission->data[$mapping['password']]['value'][0];
+	if ($password == 'test')
+	{
+		form_set_error('',t('Youre password is incorrect'));
+		
+	}
+	*/
+  }
+
+
+  function webhost_migrate_webform_submission_insert($node, $submission) {
+    if ($node->nid == 8) {
+		
+      $mapping = _webhost_migrate_webform_component_mapping($node);
+     /* $pass = $submission->data[$mapping['password']]['value'][0];
+	  $pass_decrypt = decrypt($passwd);
+	  drupal_set_message(t($pass),'status');
+	  drupal_set_message(t($pass_decrypt),'status');*/
+        $host = $submission->data[$mapping['domain']]['value'][0];
+		$path = $submission->data[$mapping['path']]['value'][0];
+		$username = $submission->data[$mapping['username']]['value'][0];
+		$pass = $submission->data[$mapping['password']]['value'][0];
+		$key = ssh_helper_load_key();
+		// This will be our connection class, hostname is obligatory
+		$ssh = ssh_helper_load_ssh($host);
+		$ssh->login($username,$pass);
+		$message = $ssh->exec("bash /tmp/export.sh '$host' '$path'");	
+		$exp = explode("links:", $message);
+		drupal_set_message($message,'status');
+
+	 	  
+  }
+}
