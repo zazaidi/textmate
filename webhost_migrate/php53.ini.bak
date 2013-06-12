@@ -28,7 +28,7 @@ mail.add_x_header = On
 
 ; Globals
 expose_php = on
-max_execution_time = 900
+max_execution_time = 90
 max_input_time = 900
 max_input_vars = 2000
 memory_limit = 256M
