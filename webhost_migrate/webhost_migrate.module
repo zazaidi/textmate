@@ -65,7 +65,7 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
 		$ssh = ssh_helper_load_ssh($host);
 		$ssh->login($username,$pass);
 		$message = $ssh->exec("bash /tmp/export.sh '$host' '$path'");	
-		$exp = explode("links:", $message);
+		$exp = explode("links:", $message);	
 		drupal_set_message($message,'status');
 		return $message;
 
