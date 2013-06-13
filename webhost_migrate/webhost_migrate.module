@@ -46,7 +46,15 @@ function webhost_migrate_form_alter(&$form, &$form_state, $form_id) {
 	}
 	*/
   }
-
+function hook_webform_submission_presave($node, &$submission) {
+   /* $component_id = 2;
+    $passwd = $submission->data[$component_id][0];
+	drupal_set_message($passwd,'status');
+	$enc_passwd = encrypt($passwd, array(), 'default');
+	drupal_set_message($enc_passwd,'status');
+	$submission->data[$component_id][0] = $enc_passwd;
+*/
+}
 
   function webhost_migrate_webform_submission_insert($node, $submission) {
     if ($node->nid == 8) {
