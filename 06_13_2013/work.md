@@ -34,4 +34,20 @@ Revision 73558
 * 14:01:00
 * 15:01:00
 >>>>>>> External Changes
+<<<<<<< Local Changes
+Meeting about Open ASU
+
+Meeting with Daniel
+------
+Gitlab > sod42.asu.edu
+
+Do du of all three before running it 
+exclude git git ignore svn in script
+
+D6 updated from D5 have files in root so need to watch out for it and remove it. 
+Check if files directory in right place or else exclude 
+
+=======
 Meeting about Open ASU* 16:01:00
+>>>>>>> External Changes
+Worked 

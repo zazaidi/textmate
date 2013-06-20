@@ -88,6 +88,7 @@ I want to have the moment of Hur every day and every night. Transform and become
 
 When will my life change? When I decide I want it to change. Every moment be in constant presence of Allah. Do not fool yourself. You will die. You will go to the grave. You will earn everything that you did will be manifested before you, whether it is big or small it shall be manifested. It is so easy for the mind to become clouded with desires and unnecessary thoughts. Once a person can have complete control over one's thoughts, he can then truly begin living his life. 
 
+5' 3"
 Medium Size 6
 * 22:09:36
 * 23:01:00

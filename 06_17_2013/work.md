@@ -7,8 +7,34 @@ Working on CE payment on qa.ce.asu.edu. Not able to get authentication due to mi
 Finished making changes to the code
 Revision 73656 and 73658 
 * 18:01:00
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+<<<<<<< Local Changes
+Getting error message with redirect -> Emailed Michael, may need to contact David Ketterman to see what is causing the issue. 
+=======
+* 19:01:00
+>>>>>>> External Changes
+=======
+* 19:01:00
+* 20:01:01
+>>>>>>> External Changes
+=======
+* 19:01:00
+* 20:01:01
+* 21:01:00
+>>>>>>> External Changes
+=======
+* 19:01:00
+* 20:01:01
+* 21:01:00
+* 22:01:00
+>>>>>>> External Changes
+=======
 * 19:01:00
 * 20:01:01
 * 21:01:00
 * 22:01:00
 * 23:01:00
+>>>>>>> External Changes

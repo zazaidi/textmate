@@ -9,4 +9,8 @@
 * 08:01:00
 * 09:01:00
 * 10:01:00
+<<<<<<< Local Changes
+Pantheon Webinar is about to begin, taking notes in Evernote. =======
 * 11:01:00
+>>>>>>> External Changes
+lcd /Users/zazaidi/Google\ Drive/textmate/webhost_migrate/ssh_helper
