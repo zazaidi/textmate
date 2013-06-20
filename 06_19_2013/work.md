@@ -11,3 +11,5 @@ Going to sleep.=======
 >>>>>>> External Changes
 * 22:01:00
 * 23:01:00
+Working on webhost350 getting it up.
+Site issrdev.asu.edu was causing the issue, full of spam. Suspended it. 
