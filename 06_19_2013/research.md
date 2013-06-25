@@ -70,6 +70,9 @@ GaN barriers are pseudomorphic,
 * 23:01:00
 >>>>>>> External Changes
 
+http://ir.lib.ksu.edu.tw/dspace/bitstream/987654321/17434/2/Effect%20of%20Growth%20Temperature.pdf
+
+#740 -> 34%
 
 
 #XPS
@@ -102,6 +105,43 @@ Ga: 2763.7
 
 XPS results indicate that in general the samples which showed 40+% indium throughout the bulk in the surface, shows only about 15% on the surface whereas the sample with only 23% indium in the bulk shows about 21% in the surface. Given that there is a nucleation layer, the absolute percentage values do not give much meaning, but the relative percentages can lead further support another conclusion. In the lower temperature samples, more indium is being incorporated within the rings and thus within the bulk of the rings where as in the higher temperature sample it indicates more indium is being kicked out of the rings and coming to the surface thereby reducing the bulk indium and increasing the surface indium content which is in line with XPS results. 
 
+
+Email
+
+spectrofluorometer
+Takayuki Nosaka [Takayuki.Nosaka@asu.edu]
+[Reply] [Reply All] [Forward]
+Actions
+To:
+ Zohair Zaidi 
+ 
+Thursday, June 20, 2013 1:56 PM
+---------- Forwarded message ----------
+From: Gerdenis <gerdenis@asu.edu>
+Date: Fri, Mar 29, 2013 at 6:07 PM
+Subject: RE: spectrofluorometer
+To: Su Lin <SLin@asu.edu>
+Cc: "Takayuki Nosaka (Student)" <Takayuki.Nosaka@asu.edu>
+
+
+Yes, lets do it Monday morning or so. I will be in ISTB5 174 from about 10 a.m., later will be in Biodesign laser lab doing SPC measurements.
+Gerdenis
+ 
+From: Su Lin [mailto:SLin@asu.edu]
+Sent: Friday, March 29, 2013 1:19 PM
+To: Gerdenis Kodis
+Cc: Takayuki Nosaka (Student)
+Subject: spectrofluorometer
+ 
+Hi Gerdenis,
+ 
+A graduate student, Takayuki Nosaka, from Michael O’Connell’s group wants to do a quick fluorescence measurement. Would you be able to help using your spectrofluorometer?
+ 
+I’m asking Takayuki to contact with you as his professor knows Devens.
+ 
+Thanks in advance!
+ 
+Su
 
 
 
