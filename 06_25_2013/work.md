@@ -44,3 +44,4 @@ Just got sudo on webtest
 Need to start from step of installing Ruby
 https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md
 * 19:01:00
+* 22:01:00
