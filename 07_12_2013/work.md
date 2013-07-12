@@ -1,3 +1,5 @@
 07_12_2013 | Work | ZZ 
 * 14:01:00
 * 15:01:00
+Working on CE quikpay
+* 16:01:00
