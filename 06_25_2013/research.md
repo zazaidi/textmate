@@ -9,4 +9,9 @@
 * 16:01:00
 * 19:01:00
 * 22:01:00
+<<<<<<< Local Changes
+Working on analyzing XRD results - seem to be most reliable results thus far. 
+=======
 * 23:01:00
+>>>>>>> External Changes
+Working on putting in XRD peaks into zohairzaidi.com/ingan

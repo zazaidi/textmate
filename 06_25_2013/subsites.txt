@@ -1,0 +1,20 @@
+#Subsites
+1. Create a new content -> Subsite
+2. Create a new menu for the subsite
+3. Create subsite pages and assign to menu
+4. Create Nice menu using the new menu (Add Block)
+4. Use Context to place Menu on appropriate Subsite pages
+
+
+Stretch menus to fill entire Menu
+Add image upload capability 
+Add boxes to the 3 boxes > Dropshadow 
+
+Add padding between the boxes 
+Equal size long boxes 
+asu.edu/clas/ssfd/
+Based on maximum subsite 
+
+
+Top Row: Long Columns
+Bottom Row: Short Columns
